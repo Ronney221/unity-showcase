@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1
+{
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+h2, h3, h5, p
+{
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+</style>
+
+<body>
+
+{% for fetched in fetched %}
+	<h1><a href={{fetched.link}}>{{fetched.project}}</a></h1>
+	<h3>By {{fetched.author}}</h3>
+	
+	<body background={{fetched.bg}}>
+	
+	<h5>THE STUDIO</h5>
+	<h2>{{fetched.h1}}</h2>
+	<p>{{fetched.h1text}}</p>
+	</br>
+	
+	
+	<h5>THE PROJECT</h5>
+	<h2>{{fetched.h2}}</h2>
+	<p>{{fetched.h2text}}</p>
+	</br>
+	
+	<h5>THE REVEAL</h5>
+	<h2>{{fetched.h3}}</h2>
+	<p>{{fetched.h3text}}</p>
+	</br>
+	
+{% endfor %}
+</body>
+</html>
